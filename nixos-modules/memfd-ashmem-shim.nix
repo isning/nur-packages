@@ -1,12 +1,12 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.services.memfd-ashmem-shim;
+  cfg = config.boot.memfd-ashmem-shim;
   
   shimPackage = config.boot.kernelPackages.callPackage ../pkgs/memfd-ashmem-shim { };
 in
 {
-  options.services.memfd-ashmem-shim = {
+  options.boot.memfd-ashmem-shim = {
     enable = lib.mkEnableOption "memfd ashmem shim OOT kernel module";
   };
 
