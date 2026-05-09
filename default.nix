@@ -11,7 +11,10 @@
 {
   # The `lib`, `modules`, and `overlays` names are special
   lib = import ./lib { inherit pkgs; }; # functions
-  modules = import ./modules; # NixOS modules
+  nixosModules = import ./nixos-modules; # NixOS modules
+  # homeModules = { }; # Home Manager modules
+  # darwinModules = { }; # nix-darwin modules
+  # flakeModules = { }; # flake-parts modules
   overlays = import ./overlays; # nixpkgs overlays
 
   # JetBrains Toolbox added with libsecret dependency for Linux
