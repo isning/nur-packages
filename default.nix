@@ -22,6 +22,7 @@
   # Currently at 00e2c2c3587ab8a46be285ddf7e2e62e22155eed
   jetbrains-toolbox = pkgs.callPackage ./pkgs/jetbrains-toolbox { };
   memfd-ashmem-shim = pkgs.linuxPackages.callPackage ./pkgs/memfd-ashmem-shim { };
+  kvlibadwaita-kvantum = pkgs.callPackage ./pkgs/kvlibadwaita-kvantum { };
 
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
