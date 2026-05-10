@@ -1,3 +1,6 @@
 result
 result-*
 
+# Direnv
+.pre-commit-config.yaml
+.direnv

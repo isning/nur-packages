@@ -1,8 +1,12 @@
-{ config, lib, pkgs, ... }:
-
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 let
   cfg = config.boot.memfd-ashmem-shim;
-  
+
   shimPackage = config.boot.kernelPackages.callPackage ../pkgs/memfd-ashmem-shim { };
 in
 {

@@ -8,7 +8,6 @@
   undmg,
   makeDesktopItem,
 }:
-
 let
   pname = "jetbrains-toolbox";
   version = "3.2.0.65851";
@@ -39,7 +38,6 @@ let
     mimeTypes = [ "x-scheme-handler/jetbrains" ];
     terminal = false;
   };
-
 
   selectSystem =
     let
