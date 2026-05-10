@@ -5,9 +5,11 @@
 # Having pkgs default to <nixpkgs> is fine though, and it lets you use short
 # commands such as:
 #     nix-build -A mypackage
-
-{ system ? builtins.currentSystem, pkgs ? import <nixpkgs> { inherit system; }, ... }:
-
+{
+  system ? builtins.currentSystem,
+  pkgs ? import <nixpkgs> { inherit system; },
+  ...
+}:
 {
   # The `lib`, `modules`, and `overlays` names are special
   lib = import ./lib { inherit pkgs; }; # functions
@@ -23,6 +25,7 @@
   jetbrains-toolbox = pkgs.callPackage ./pkgs/jetbrains-toolbox { };
   memfd-ashmem-shim = pkgs.linuxPackages.callPackage ./pkgs/memfd-ashmem-shim { };
   kvlibadwaita-kvantum = pkgs.callPackage ./pkgs/kvlibadwaita-kvantum { };
+  qt6ct = pkgs.kdePackages.callPackage ./pkgs/qt6ct { };
 
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
